@@ -172,6 +172,10 @@ set -e
 
 mkdir -p $(dirname $PROFILE_PATH)
 
+# Install Graphviz.
+
+source $BIN_DIR/steps/graphviz
+
 # Install Python.
 source $BIN_DIR/steps/python
 
