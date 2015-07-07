@@ -1,9 +1,14 @@
-# Install Graphviz from Ubuntu package archive.
+# Install Graphviz from source
 #
 # This is a huge hack... mostly to see if I understand how buildpacks work
 # correctly.
 
 bpwatch start graphviz_install
-  puts-step "Installing Graphviz from package repo"
-  sudo apt-get install graphviz
+  puts-step "Building Graphviz from source"
+  wget http://graphviz.org/pub/graphviz/stable/SOURCES/graphviz-2.38.0.tar.gz
+  tar xf graphviz-2.38.0.tar.gz
+  cd graphviz-2.38.0
+  ./configure --prefix=/usr
+  make
+  make DESTDIR="$ROOT_DIR" install
 bpwatch stop graphviz_install
