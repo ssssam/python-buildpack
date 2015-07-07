@@ -1,9 +1,9 @@
-# Install Graphviz from a Fedora RPM
+# Install Graphviz from Ubuntu package archive.
 #
 # This is a huge hack... mostly to see if I understand how buildpacks work
 # correctly.
 
 bpwatch start graphviz_install
-  puts-step "Installing Graphviz from a Fedora RPM"
-  rpm --root="$ROOT_DIR" --install --nodeps https://kojipkgs.fedoraproject.org//packages/graphviz/2.34.0/10.fc20/x86_64/graphviz-2.34.0-10.fc20.x86_64.rpm
+  puts-step "Installing Graphviz from package repo"
+  apt-get install graphviz
 bpwatch stop graphviz_install
