@@ -11,4 +11,5 @@ bpwatch start graphviz_install
   ./configure --prefix=/usr
   make
   make DESTDIR="$ROOT_DIR" install
+  cd ..
 bpwatch stop graphviz_install
