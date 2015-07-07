@@ -5,5 +5,5 @@
 
 bpwatch start graphviz_install
   puts-step "Installing Graphviz from package repo"
-  apt-get install graphviz
+  sudo apt-get install graphviz
 bpwatch stop graphviz_install
